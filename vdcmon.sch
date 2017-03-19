@@ -1,0 +1,931 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:pietern-mosfet
+LIBS:vdcmon-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Voltage monitoring switchboard"
+Date "2017-03-19"
+Rev "1.1"
+Comp "@pietern"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 2N7000 Q1
+U 1 1 587DAB7C
+P 1850 4250
+F 0 "Q1" H 2050 4325 50  0000 L CNN
+F 1 "2N7000" H 2050 4250 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 2050 4175 50  0001 L CIN
+F 3 "" H 1850 4250 50  0000 L CNN
+	1    1850 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 587DAEC5
+P 1800 4500
+F 0 "R5" V 1880 4500 50  0000 C CNN
+F 1 "100k" V 1800 4500 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1730 4500 50  0001 C CNN
+F 3 "" H 1800 4500 50  0000 C CNN
+	1    1800 4500
+	0    -1   -1   0   
+$EndComp
+Text GLabel 2150 3950 0    60   Output ~ 0
+VDC1
+Text GLabel 2050 4500 2    60   Input ~ 0
+GND1
+Wire Wire Line
+	1950 4450 1950 4500
+Wire Wire Line
+	1950 4500 2050 4500
+Wire Wire Line
+	1600 4300 1650 4300
+Wire Wire Line
+	1650 4300 1650 4500
+Wire Wire Line
+	1950 4050 2150 4050
+$Comp
+L CONN_01X02 P1A1
+U 1 1 588050D4
+P 1700 3200
+F 0 "P1A1" H 1700 3350 50  0000 C CNN
+F 1 "IN1" V 1800 3200 50  0000 C CNN
+F 2 "pietern-modules:26-350_CONN_2_plus_minus" H 1700 3200 50  0001 C CNN
+F 3 "" H 1700 3200 50  0000 C CNN
+	1    1700 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P1B1
+U 1 1 58805183
+P 2350 4000
+F 0 "P1B1" H 2350 4150 50  0000 C CNN
+F 1 "OUT1" V 2450 4000 50  0000 C CNN
+F 2 "pietern-modules:26-350_CONN_2_plus_minus" H 2350 4000 50  0001 C CNN
+F 3 "" H 2350 4000 50  0000 C CNN
+	1    2350 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 2000 3150 2    60   Input ~ 0
+GND1
+Wire Wire Line
+	1900 3250 2000 3250
+Text GLabel 2000 3250 2    60   Output ~ 0
+VDC1
+Wire Wire Line
+	1900 3150 2000 3150
+Wire Wire Line
+	2150 3950 2150 3950
+Connection ~ 1950 4500
+Text GLabel 1600 4300 0    60   Input ~ 0
+FET1
+Connection ~ 1650 4300
+Text GLabel 2200 1150 2    60   Output ~ 0
+FET1
+Text GLabel 1450 950  0    60   Input ~ 0
+DR1
+$Comp
+L PC817 U1B1
+U 1 1 5881C2F5
+P 1850 1500
+F 0 "U1B1" H 1650 1700 50  0000 L CNN
+F 1 "FOD817A" H 1850 1700 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 1650 1300 50  0001 L CIN
+F 3 "" H 1850 1500 50  0000 L CNN
+	1    1850 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1B1
+U 1 1 5881C2FB
+P 1350 1600
+F 0 "R1B1" V 1430 1600 50  0000 C CNN
+F 1 "10k" V 1350 1600 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1280 1600 50  0001 C CNN
+F 3 "" H 1350 1600 50  0000 C CNN
+	1    1350 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1500 1600 1550 1600
+Text GLabel 2200 1400 2    60   Input ~ 0
+VDC1
+Wire Wire Line
+	2200 1400 2150 1400
+Text GLabel 2200 1600 2    60   Output ~ 0
+FET1
+Wire Wire Line
+	2150 1600 2200 1600
+Wire Wire Line
+	1550 1400 1450 1400
+Text GLabel 1450 1400 0    60   Input ~ 0
+DR2
+Text GLabel 1150 1600 0    60   Output ~ 0
+GND2
+Wire Wire Line
+	1200 1600 1150 1600
+$Comp
+L PC817 U1C1
+U 1 1 5881C36A
+P 1850 1950
+F 0 "U1C1" H 1650 2150 50  0000 L CNN
+F 1 "FOD817A" H 1850 2150 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 1650 1750 50  0001 L CIN
+F 3 "" H 1850 1950 50  0000 L CNN
+	1    1850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1C1
+U 1 1 5881C370
+P 1350 2050
+F 0 "R1C1" V 1430 2050 50  0000 C CNN
+F 1 "10k" V 1350 2050 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1280 2050 50  0001 C CNN
+F 3 "" H 1350 2050 50  0000 C CNN
+	1    1350 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1500 2050 1550 2050
+Text GLabel 2200 1850 2    60   Input ~ 0
+VDC1
+Wire Wire Line
+	2200 1850 2150 1850
+Text GLabel 2200 2050 2    60   Output ~ 0
+FET1
+Wire Wire Line
+	2150 2050 2200 2050
+Wire Wire Line
+	1550 1850 1450 1850
+Text GLabel 1450 1850 0    60   Input ~ 0
+DR3
+Text GLabel 1150 2050 0    60   Output ~ 0
+GND3
+Wire Wire Line
+	1200 2050 1150 2050
+$Comp
+L PC817 U1D1
+U 1 1 5881C3DF
+P 1850 2400
+F 0 "U1D1" H 1650 2600 50  0000 L CNN
+F 1 "FOD817A" H 1850 2600 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 1650 2200 50  0001 L CIN
+F 3 "" H 1850 2400 50  0000 L CNN
+	1    1850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1D1
+U 1 1 5881C3E5
+P 1350 2500
+F 0 "R1D1" V 1430 2500 50  0000 C CNN
+F 1 "10k" V 1350 2500 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1280 2500 50  0001 C CNN
+F 3 "" H 1350 2500 50  0000 C CNN
+	1    1350 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1500 2500 1550 2500
+Text GLabel 2200 2300 2    60   Input ~ 0
+VDC1
+Wire Wire Line
+	2200 2300 2150 2300
+Text GLabel 2200 2500 2    60   Output ~ 0
+FET1
+Wire Wire Line
+	2150 2500 2200 2500
+Wire Wire Line
+	1550 2300 1450 2300
+Text GLabel 1450 2300 0    60   Input ~ 0
+DR4
+Text GLabel 1150 2500 0    60   Output ~ 0
+GND4
+Wire Wire Line
+	1200 2500 1150 2500
+$Comp
+L PC817 U2A1
+U 1 1 5881D75F
+P 3800 1050
+F 0 "U2A1" H 3600 1250 50  0000 L CNN
+F 1 "FOD817A" H 3800 1250 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 3600 850 50  0001 L CIN
+F 3 "" H 3800 1050 50  0000 L CNN
+	1    3800 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2A1
+U 1 1 5881D765
+P 3300 1150
+F 0 "R2A1" V 3380 1150 50  0000 C CNN
+F 1 "10k" V 3300 1150 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3230 1150 50  0001 C CNN
+F 3 "" H 3300 1150 50  0000 C CNN
+	1    3300 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 1150 3500 1150
+Text GLabel 4150 950  2    60   Input ~ 0
+VDC2
+Wire Wire Line
+	4150 950  4100 950 
+Text GLabel 4150 1150 2    60   Output ~ 0
+FET2
+Wire Wire Line
+	4100 1150 4150 1150
+Wire Wire Line
+	3500 950  3400 950 
+Text GLabel 3400 950  0    60   Input ~ 0
+DR1
+Text GLabel 3100 1150 0    60   Output ~ 0
+GND1
+Wire Wire Line
+	3150 1150 3100 1150
+Text GLabel 4150 1600 2    60   Output ~ 0
+FET2
+Wire Wire Line
+	3800 1600 4150 1600
+Wire Wire Line
+	3400 1400 3800 1400
+Text GLabel 3400 1400 0    60   Input ~ 0
+DR2
+$Comp
+L PC817 U2C1
+U 1 1 5881D789
+P 3800 1950
+F 0 "U2C1" H 3600 2150 50  0000 L CNN
+F 1 "FOD817A" H 3800 2150 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 3600 1750 50  0001 L CIN
+F 3 "" H 3800 1950 50  0000 L CNN
+	1    3800 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2C1
+U 1 1 5881D78F
+P 3300 2050
+F 0 "R2C1" V 3380 2050 50  0000 C CNN
+F 1 "10k" V 3300 2050 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3230 2050 50  0001 C CNN
+F 3 "" H 3300 2050 50  0000 C CNN
+	1    3300 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 2050 3500 2050
+Text GLabel 4150 1850 2    60   Input ~ 0
+VDC2
+Wire Wire Line
+	4150 1850 4100 1850
+Text GLabel 4150 2050 2    60   Output ~ 0
+FET2
+Wire Wire Line
+	4100 2050 4150 2050
+Wire Wire Line
+	3500 1850 3400 1850
+Text GLabel 3400 1850 0    60   Input ~ 0
+DR3
+Text GLabel 3100 2050 0    60   Output ~ 0
+GND3
+Wire Wire Line
+	3150 2050 3100 2050
+$Comp
+L PC817 U2D1
+U 1 1 5881D79E
+P 3800 2400
+F 0 "U2D1" H 3600 2600 50  0000 L CNN
+F 1 "FOD817A" H 3800 2600 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 3600 2200 50  0001 L CIN
+F 3 "" H 3800 2400 50  0000 L CNN
+	1    3800 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2D1
+U 1 1 5881D7A4
+P 3300 2500
+F 0 "R2D1" V 3380 2500 50  0000 C CNN
+F 1 "10k" V 3300 2500 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3230 2500 50  0001 C CNN
+F 3 "" H 3300 2500 50  0000 C CNN
+	1    3300 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 2500 3500 2500
+Text GLabel 4150 2300 2    60   Input ~ 0
+VDC2
+Wire Wire Line
+	4150 2300 4100 2300
+Text GLabel 4150 2500 2    60   Output ~ 0
+FET2
+Wire Wire Line
+	4100 2500 4150 2500
+Wire Wire Line
+	3500 2300 3400 2300
+Text GLabel 3400 2300 0    60   Input ~ 0
+DR4
+Text GLabel 3100 2500 0    60   Output ~ 0
+GND4
+Wire Wire Line
+	3150 2500 3100 2500
+$Comp
+L PC817 U3A1
+U 1 1 5881DCCD
+P 5750 1050
+F 0 "U3A1" H 5550 1250 50  0000 L CNN
+F 1 "FOD817A" H 5750 1250 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 5550 850 50  0001 L CIN
+F 3 "" H 5750 1050 50  0000 L CNN
+	1    5750 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3A1
+U 1 1 5881DCD3
+P 5250 1150
+F 0 "R3A1" V 5330 1150 50  0000 C CNN
+F 1 "10k" V 5250 1150 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5180 1150 50  0001 C CNN
+F 3 "" H 5250 1150 50  0000 C CNN
+	1    5250 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 1150 5450 1150
+Text GLabel 6100 950  2    60   Input ~ 0
+VDC3
+Wire Wire Line
+	6100 950  6050 950 
+Text GLabel 6100 1150 2    60   Output ~ 0
+FET3
+Wire Wire Line
+	6050 1150 6100 1150
+Wire Wire Line
+	5450 950  5350 950 
+Text GLabel 5350 950  0    60   Input ~ 0
+DR1
+Text GLabel 5050 1150 0    60   Output ~ 0
+GND1
+Wire Wire Line
+	5100 1150 5050 1150
+$Comp
+L PC817 U3B1
+U 1 1 5881DCE2
+P 5750 1500
+F 0 "U3B1" H 5550 1700 50  0000 L CNN
+F 1 "FOD817A" H 5750 1700 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 5550 1300 50  0001 L CIN
+F 3 "" H 5750 1500 50  0000 L CNN
+	1    5750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3B1
+U 1 1 5881DCE8
+P 5250 1600
+F 0 "R3B1" V 5330 1600 50  0000 C CNN
+F 1 "10k" V 5250 1600 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5180 1600 50  0001 C CNN
+F 3 "" H 5250 1600 50  0000 C CNN
+	1    5250 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 1600 5450 1600
+Text GLabel 6100 1400 2    60   Input ~ 0
+VDC3
+Wire Wire Line
+	6100 1400 6050 1400
+Text GLabel 6100 1600 2    60   Output ~ 0
+FET3
+Wire Wire Line
+	6050 1600 6100 1600
+Wire Wire Line
+	5450 1400 5350 1400
+Text GLabel 5350 1400 0    60   Input ~ 0
+DR2
+Text GLabel 5050 1600 0    60   Output ~ 0
+GND2
+Wire Wire Line
+	5100 1600 5050 1600
+Text GLabel 6100 2050 2    60   Output ~ 0
+FET3
+Wire Wire Line
+	5750 2050 6100 2050
+Wire Wire Line
+	5350 1850 5750 1850
+Text GLabel 5350 1850 0    60   Input ~ 0
+DR3
+$Comp
+L PC817 U3D1
+U 1 1 5881DD0C
+P 5750 2400
+F 0 "U3D1" H 5550 2600 50  0000 L CNN
+F 1 "FOD817A" H 5750 2600 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 5550 2200 50  0001 L CIN
+F 3 "" H 5750 2400 50  0000 L CNN
+	1    5750 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3D1
+U 1 1 5881DD12
+P 5250 2500
+F 0 "R3D1" V 5330 2500 50  0000 C CNN
+F 1 "10k" V 5250 2500 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5180 2500 50  0001 C CNN
+F 3 "" H 5250 2500 50  0000 C CNN
+	1    5250 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 2500 5450 2500
+Text GLabel 6100 2300 2    60   Input ~ 0
+VDC3
+Wire Wire Line
+	6100 2300 6050 2300
+Text GLabel 6100 2500 2    60   Output ~ 0
+FET3
+Wire Wire Line
+	6050 2500 6100 2500
+Wire Wire Line
+	5450 2300 5350 2300
+Text GLabel 5350 2300 0    60   Input ~ 0
+DR4
+Text GLabel 5050 2500 0    60   Output ~ 0
+GND4
+Wire Wire Line
+	5100 2500 5050 2500
+$Comp
+L PC817 U4A1
+U 1 1 5881DFD1
+P 7650 1050
+F 0 "U4A1" H 7450 1250 50  0000 L CNN
+F 1 "FOD817A" H 7650 1250 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 7450 850 50  0001 L CIN
+F 3 "" H 7650 1050 50  0000 L CNN
+	1    7650 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4A1
+U 1 1 5881DFD7
+P 7150 1150
+F 0 "R4A1" V 7230 1150 50  0000 C CNN
+F 1 "10k" V 7150 1150 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7080 1150 50  0001 C CNN
+F 3 "" H 7150 1150 50  0000 C CNN
+	1    7150 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 1150 7350 1150
+Text GLabel 8000 950  2    60   Input ~ 0
+VDC4
+Wire Wire Line
+	8000 950  7950 950 
+Text GLabel 8000 1150 2    60   Output ~ 0
+FET4
+Wire Wire Line
+	7950 1150 8000 1150
+Wire Wire Line
+	7350 950  7250 950 
+Text GLabel 7250 950  0    60   Input ~ 0
+DR1
+Text GLabel 6950 1150 0    60   Output ~ 0
+GND1
+Wire Wire Line
+	7000 1150 6950 1150
+$Comp
+L PC817 U4B1
+U 1 1 5881DFE6
+P 7650 1500
+F 0 "U4B1" H 7450 1700 50  0000 L CNN
+F 1 "FOD817A" H 7650 1700 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 7450 1300 50  0001 L CIN
+F 3 "" H 7650 1500 50  0000 L CNN
+	1    7650 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4B1
+U 1 1 5881DFEC
+P 7150 1600
+F 0 "R4B1" V 7230 1600 50  0000 C CNN
+F 1 "10k" V 7150 1600 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7080 1600 50  0001 C CNN
+F 3 "" H 7150 1600 50  0000 C CNN
+	1    7150 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 1600 7350 1600
+Text GLabel 8000 1400 2    60   Input ~ 0
+VDC4
+Wire Wire Line
+	8000 1400 7950 1400
+Text GLabel 8000 1600 2    60   Output ~ 0
+FET4
+Wire Wire Line
+	7950 1600 8000 1600
+Wire Wire Line
+	7350 1400 7250 1400
+Text GLabel 7250 1400 0    60   Input ~ 0
+DR2
+Text GLabel 6950 1600 0    60   Output ~ 0
+GND2
+Wire Wire Line
+	7000 1600 6950 1600
+$Comp
+L PC817 U4C1
+U 1 1 5881DFFB
+P 7650 1950
+F 0 "U4C1" H 7450 2150 50  0000 L CNN
+F 1 "FOD817A" H 7650 2150 50  0000 L CNN
+F 2 "Housings_DIP:DIP-4_W10.16mm" H 7450 1750 50  0001 L CIN
+F 3 "" H 7650 1950 50  0000 L CNN
+	1    7650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4C1
+U 1 1 5881E001
+P 7150 2050
+F 0 "R4C1" V 7230 2050 50  0000 C CNN
+F 1 "10k" V 7150 2050 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7080 2050 50  0001 C CNN
+F 3 "" H 7150 2050 50  0000 C CNN
+	1    7150 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 2050 7350 2050
+Text GLabel 8000 1850 2    60   Input ~ 0
+VDC4
+Wire Wire Line
+	8000 1850 7950 1850
+Text GLabel 8000 2050 2    60   Output ~ 0
+FET4
+Wire Wire Line
+	7950 2050 8000 2050
+Wire Wire Line
+	7350 1850 7250 1850
+Text GLabel 7250 1850 0    60   Input ~ 0
+DR3
+Text GLabel 6950 2050 0    60   Output ~ 0
+GND3
+Wire Wire Line
+	7000 2050 6950 2050
+Text GLabel 8000 2500 2    60   Output ~ 0
+FET4
+Wire Wire Line
+	7650 2500 8000 2500
+Wire Wire Line
+	7250 2300 7650 2300
+Text GLabel 7250 2300 0    60   Input ~ 0
+DR4
+$Comp
+L CONN_01X02 P1C1
+U 1 1 5881FFAD
+P 1700 2850
+F 0 "P1C1" H 1700 3000 50  0000 C CNN
+F 1 "JMP1" V 1800 2850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 1700 2850 50  0001 C CNN
+F 3 "" H 1700 2850 50  0000 C CNN
+	1    1700 2850
+	-1   0    0    1   
+$EndComp
+Text GLabel 2000 2900 2    60   Input ~ 0
+VDC1
+Text GLabel 2000 2800 2    60   Output ~ 0
+DR1
+Wire Wire Line
+	1900 2900 2000 2900
+Wire Wire Line
+	1900 2800 2000 2800
+$Comp
+L CONN_01X02 P2A1
+U 1 1 588211D3
+P 3650 3150
+F 0 "P2A1" H 3650 3300 50  0000 C CNN
+F 1 "IN2" V 3750 3150 50  0000 C CNN
+F 2 "pietern-modules:26-350_CONN_2_plus_minus" H 3650 3150 50  0001 C CNN
+F 3 "" H 3650 3150 50  0000 C CNN
+	1    3650 3150
+	-1   0    0    1   
+$EndComp
+Text GLabel 3950 3100 2    60   Input ~ 0
+GND2
+Wire Wire Line
+	3850 3200 3950 3200
+Text GLabel 3950 3200 2    60   Output ~ 0
+VDC2
+Wire Wire Line
+	3850 3100 3950 3100
+$Comp
+L CONN_01X02 P2C1
+U 1 1 588211DD
+P 3650 2800
+F 0 "P2C1" H 3650 2950 50  0000 C CNN
+F 1 "JMP2" V 3750 2800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 3650 2800 50  0001 C CNN
+F 3 "" H 3650 2800 50  0000 C CNN
+	1    3650 2800
+	-1   0    0    1   
+$EndComp
+Text GLabel 3950 2850 2    60   Input ~ 0
+VDC2
+Text GLabel 3950 2750 2    60   Output ~ 0
+DR2
+Wire Wire Line
+	3850 2850 3950 2850
+Wire Wire Line
+	3850 2750 3950 2750
+$Comp
+L CONN_01X02 P3A1
+U 1 1 5882179A
+P 5600 3150
+F 0 "P3A1" H 5600 3300 50  0000 C CNN
+F 1 "IN3" V 5700 3150 50  0000 C CNN
+F 2 "pietern-modules:26-350_CONN_2_plus_minus" H 5600 3150 50  0001 C CNN
+F 3 "" H 5600 3150 50  0000 C CNN
+	1    5600 3150
+	-1   0    0    1   
+$EndComp
+Text GLabel 5900 3100 2    60   Input ~ 0
+GND3
+Wire Wire Line
+	5800 3200 5900 3200
+Text GLabel 5900 3200 2    60   Output ~ 0
+VDC3
+Wire Wire Line
+	5800 3100 5900 3100
+$Comp
+L CONN_01X02 P3C1
+U 1 1 588217A4
+P 5600 2800
+F 0 "P3C1" H 5600 2950 50  0000 C CNN
+F 1 "JMP3" V 5700 2800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 5600 2800 50  0001 C CNN
+F 3 "" H 5600 2800 50  0000 C CNN
+	1    5600 2800
+	-1   0    0    1   
+$EndComp
+Text GLabel 5900 2850 2    60   Input ~ 0
+VDC3
+Text GLabel 5900 2750 2    60   Output ~ 0
+DR3
+Wire Wire Line
+	5800 2850 5900 2850
+Wire Wire Line
+	5800 2750 5900 2750
+$Comp
+L CONN_01X02 P4A1
+U 1 1 588219EE
+P 7500 3150
+F 0 "P4A1" H 7500 3300 50  0000 C CNN
+F 1 "IN4" V 7600 3150 50  0000 C CNN
+F 2 "pietern-modules:26-350_CONN_2_plus_minus" H 7500 3150 50  0001 C CNN
+F 3 "" H 7500 3150 50  0000 C CNN
+	1    7500 3150
+	-1   0    0    1   
+$EndComp
+Text GLabel 7800 3100 2    60   Input ~ 0
+GND4
+Wire Wire Line
+	7700 3200 7800 3200
+Text GLabel 7800 3200 2    60   Output ~ 0
+VDC4
+Wire Wire Line
+	7700 3100 7800 3100
+$Comp
+L CONN_01X02 P4C1
+U 1 1 588219F8
+P 7500 2800
+F 0 "P4C1" H 7500 2950 50  0000 C CNN
+F 1 "JMP4" V 7600 2800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7500 2800 50  0001 C CNN
+F 3 "" H 7500 2800 50  0000 C CNN
+	1    7500 2800
+	-1   0    0    1   
+$EndComp
+Text GLabel 7800 2850 2    60   Input ~ 0
+VDC4
+Text GLabel 7800 2750 2    60   Output ~ 0
+DR4
+Wire Wire Line
+	7700 2850 7800 2850
+Wire Wire Line
+	7700 2750 7800 2750
+$Comp
+L 2N7000 Q2
+U 1 1 588226A9
+P 3750 4250
+F 0 "Q2" H 3950 4325 50  0000 L CNN
+F 1 "2N7000" H 3950 4250 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 3950 4175 50  0001 L CIN
+F 3 "" H 3750 4250 50  0000 L CNN
+	1    3750 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 588226AF
+P 3700 4500
+F 0 "R6" V 3780 4500 50  0000 C CNN
+F 1 "100k" V 3700 4500 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3630 4500 50  0001 C CNN
+F 3 "" H 3700 4500 50  0000 C CNN
+	1    3700 4500
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4050 3950 0    60   Output ~ 0
+VDC2
+Text GLabel 3950 4500 2    60   Input ~ 0
+GND2
+Wire Wire Line
+	3850 4450 3850 4500
+Wire Wire Line
+	3850 4500 3950 4500
+Wire Wire Line
+	3500 4300 3550 4300
+Wire Wire Line
+	3550 4300 3550 4500
+Wire Wire Line
+	3850 4050 4050 4050
+$Comp
+L CONN_01X02 P2B1
+U 1 1 588226BC
+P 4250 4000
+F 0 "P2B1" H 4250 4150 50  0000 C CNN
+F 1 "OUT2" V 4350 4000 50  0000 C CNN
+F 2 "pietern-modules:26-350_CONN_2_plus_minus" H 4250 4000 50  0001 C CNN
+F 3 "" H 4250 4000 50  0000 C CNN
+	1    4250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3950 4050 3950
+Connection ~ 3850 4500
+Text GLabel 3500 4300 0    60   Input ~ 0
+FET2
+Connection ~ 3550 4300
+$Comp
+L 2N7000 Q3
+U 1 1 58822FED
+P 5750 4250
+F 0 "Q3" H 5950 4325 50  0000 L CNN
+F 1 "2N7000" H 5950 4250 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 5950 4175 50  0001 L CIN
+F 3 "" H 5750 4250 50  0000 L CNN
+	1    5750 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 58822FF3
+P 5700 4500
+F 0 "R7" V 5780 4500 50  0000 C CNN
+F 1 "100k" V 5700 4500 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5630 4500 50  0001 C CNN
+F 3 "" H 5700 4500 50  0000 C CNN
+	1    5700 4500
+	0    -1   -1   0   
+$EndComp
+Text GLabel 6050 3950 0    60   Output ~ 0
+VDC3
+Text GLabel 5950 4500 2    60   Input ~ 0
+GND3
+Wire Wire Line
+	5850 4450 5850 4500
+Wire Wire Line
+	5850 4500 5950 4500
+Wire Wire Line
+	5500 4300 5550 4300
+Wire Wire Line
+	5550 4300 5550 4500
+Wire Wire Line
+	5850 4050 6050 4050
+$Comp
+L CONN_01X02 P3B1
+U 1 1 58823000
+P 6250 4000
+F 0 "P3B1" H 6250 4150 50  0000 C CNN
+F 1 "OUT3" V 6350 4000 50  0000 C CNN
+F 2 "pietern-modules:26-350_CONN_2_plus_minus" H 6250 4000 50  0001 C CNN
+F 3 "" H 6250 4000 50  0000 C CNN
+	1    6250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3950 6050 3950
+Connection ~ 5850 4500
+Text GLabel 5500 4300 0    60   Input ~ 0
+FET3
+Connection ~ 5550 4300
+$Comp
+L 2N7000 Q4
+U 1 1 5882352A
+P 7600 4250
+F 0 "Q4" H 7800 4325 50  0000 L CNN
+F 1 "2N7000" H 7800 4250 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Inline_Narrow_Oval" H 7800 4175 50  0001 L CIN
+F 3 "" H 7600 4250 50  0000 L CNN
+	1    7600 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 58823530
+P 7550 4500
+F 0 "R8" V 7630 4500 50  0000 C CNN
+F 1 "100k" V 7550 4500 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7480 4500 50  0001 C CNN
+F 3 "" H 7550 4500 50  0000 C CNN
+	1    7550 4500
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7900 3950 0    60   Output ~ 0
+VDC4
+Text GLabel 7800 4500 2    60   Input ~ 0
+GND4
+Wire Wire Line
+	7700 4450 7700 4500
+Wire Wire Line
+	7700 4500 7800 4500
+Wire Wire Line
+	7350 4300 7400 4300
+Wire Wire Line
+	7400 4300 7400 4500
+Wire Wire Line
+	7700 4050 7900 4050
+$Comp
+L CONN_01X02 P4B1
+U 1 1 5882353D
+P 8100 4000
+F 0 "P4B1" H 8100 4150 50  0000 C CNN
+F 1 "OUT4" V 8200 4000 50  0000 C CNN
+F 2 "pietern-modules:26-350_CONN_2_plus_minus" H 8100 4000 50  0001 C CNN
+F 3 "" H 8100 4000 50  0000 C CNN
+	1    8100 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3950 7900 3950
+Connection ~ 7700 4500
+Text GLabel 7350 4300 0    60   Input ~ 0
+FET4
+Connection ~ 7400 4300
+Wire Wire Line
+	1450 950  1850 950 
+Wire Wire Line
+	1850 950  1850 1150
+Wire Wire Line
+	1850 1150 2200 1150
+Wire Wire Line
+	3800 1400 3800 1600
+Wire Wire Line
+	5750 1850 5750 2050
+Wire Wire Line
+	7650 2300 7650 2500
+$EndSCHEMATC
